@@ -21,8 +21,7 @@ function renderItems(filteredItems) {
     el.innerHTML = `
       <img src="images/${item.asin}.jpg" alt="${item.name}">
       <h3>${item.name}</h3>
-      <p>${item.description}</p>
-      <div class="price">$${item.price.toFixed(2)}</div>
+      <div class="price">$ ${item.price.toFixed(2)}</div>
     `;
     el.onclick = () => showDetails(item);
     catalog.appendChild(el);
@@ -58,8 +57,28 @@ function clearFilters() {
 function showDetails(item) {
   document.getElementById('modal-title').textContent = item.name;
   document.getElementById('modal-description').textContent = item.description;
+  document.getElementById('modal-brand').textContent = item.brand;
+  document.getElementById('modal-condition').textContent = "New";
+  document.getElementById('modal-price').textContent = "$ " + parseFloat(item.price).toFixed(2);
+  document.getElementById('modal-img').src = "images/" + item.asin + ".jpg";
+
+  const detailsList = document.getElementById('modal-details');
+  detailsList.innerHTML = ''; // Clear existing items
+
+  if (item.details && item.details.length > 0) {
+    item.details.forEach(detail => {
+      const li = document.createElement('li');
+      li.textContent = detail;
+      detailsList.appendChild(li);
+    });
+    detailsList.style.display = 'block';
+  } else {
+    detailsList.style.display = 'none';
+  }
+
   document.getElementById('modal').style.display = 'flex';
 }
+
 
 function closeModal() {
   document.getElementById('modal').style.display = 'none';
