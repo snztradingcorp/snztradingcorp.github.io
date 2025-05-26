@@ -1,18 +1,11 @@
-/*
-
-    {
-        name:"",
-        category:"",
-        sku: "",
-        asin: "",
-        description: "",
-        details: "",
-        condition: "",
-        price: 0.00,
-        stock: 0
-    }
-
-*/
+function initializeCategoryFilter(categories) {
+  // Initialize all available categories in dropdown
+  const categoryFilter = document.getElementById("category");
+  for(let i=0; i<categories.length; i++) {
+    const value = categories[i];
+    categoryFilter.innerHTML += '<option value="' + value + '">' + value + '</option>'
+  }
+}
 
 function renderItems(filteredItems) {
   const catalog = document.getElementById('catalog');
@@ -25,18 +18,13 @@ function renderItems(filteredItems) {
   filteredItems.forEach(item => {
     const el = document.createElement('div');
     el.className = 'item';
-    // el.innerHTML = `
-    //   <img src="${item.img}" alt="${item.name}">
-    //   <h3>${item.name}</h3>
-    //   <p>${item.description}</p>
-    //   <div class="price">$${item.price.toFixed(2)}</div>
-    // `;
     el.innerHTML = `
+      <img src="images/${item.asin}.jpg" alt="${item.name}">
       <h3>${item.name}</h3>
       <p>${item.description}</p>
-      <div class="price">$ ${item.price.toFixed(2)}</div>
+      <div class="price">$${item.price.toFixed(2)}</div>
     `;
-    el.onclick = () => showDetails(item.name, `${item.description} ${item.details}`);
+    el.onclick = () => showDetails(item);
     catalog.appendChild(el);
   });
 }
@@ -67,9 +55,9 @@ function clearFilters() {
   renderItems(items);
 }
 
-function showDetails(title, description) {
-  document.getElementById('modal-title').textContent = title;
-  document.getElementById('modal-description').textContent = description;
+function showDetails(item) {
+  document.getElementById('modal-title').textContent = item.name;
+  document.getElementById('modal-description').textContent = item.description;
   document.getElementById('modal').style.display = 'flex';
 }
 
@@ -84,4 +72,7 @@ window.onclick = function(event) {
   }
 }
 
+
+// Below functions are called as soon as the script is loaded
 renderItems(items);
+initializeCategoryFilter(categories);
