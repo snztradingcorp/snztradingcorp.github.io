@@ -1,7 +1,5 @@
 const categories = ["Barrel", "Scope", "Flashlight", "Earbuds", "Weapons Light", "Knife", "Other"];
 
-
-// Not found - indexes [B086OO4295]
 // Last item missing asin value
 const items = [
     {
@@ -39,7 +37,7 @@ const items = [
     },
     {
         name:"Crimson Trace RAD Micro Compact Open Reflex Pistol Sight",
-        brand: "Crimson Tace",
+        brand: "Crimson Trace",
         // model: "",
         category:"Scope",
         asin: "B08Q39GM75",
