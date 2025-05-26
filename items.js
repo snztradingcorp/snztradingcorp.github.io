@@ -1,7 +1,7 @@
 const categories = ["Barrel", "Scope", "Flashlight", "Earbuds", "Weapons Light", "Knife", "Other"];
 
 
-// Not found - indexes [B000Q9C4AE, B086OO4295]
+// Not found - indexes [B086OO4295]
 // Last item missing asin value
 const items = [
     {
@@ -22,10 +22,17 @@ const items = [
     },
     {
         name:"Spyderco Tri-Angle Sharpmaker",
-        category:"",
+        brand: "Spyderco",
+        category:"Other",
         asin: "B000Q9C4AE",
-        description: "",
-        details: "",
+        description: "Knife Sharpening System with Medium Grit and Fine Ceramic Stones for Professional-Grade Finishing - Compact, Easy-to-Use Design - 204MF",
+        details: [
+            "Complete Sharpening System - Includes medium and fine grit ceramic stones for both edge maintenance and precision sharpening of knives and tools.",
+            "Versatile Performance - Perfect for sharpening knives, awls, scissors, and and many other tools, making it an all-in-one solution for your sharpening needs.",
+            "Effortless Sharpening - The Tri-Angle Sharpmaker makes sharpening easy, removing steel at the edge while maintaining consistent angles for precise results every time.",
+            "Two Grit Options - Comes with medium-grit (brown) ceramic stones for aggressive sharpening and fine-grit (white) stones for a professional-grade, polished finish.",
+            "Safe & Compact Design - Includes aluminum safety rods to protect your hands during use, and all components snap into the durable ABS plastic base for convenient storage. Complete with an instructional book and DVD for guided sharpening."
+        ],
         condition: "New",
         price: 88.00,
         stock: 0
@@ -194,11 +201,13 @@ const items = [
     },
     {
         name:"SureFire Scout Light Pro Ultra-High",
-        category:"",
+        brand: "SureFire",
+        category:"Weapons Light",
         asin: "B086OO4295",
-        description: "",
+        description: "Ultra-High-Output LED WeaponLight",
         details: [
-
+            "Good product",
+            "Black color, plastic material, LED light"
         ],
         price: 310.00
     },
