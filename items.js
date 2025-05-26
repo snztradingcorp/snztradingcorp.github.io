@@ -1,7 +1,8 @@
 const categories = ["Barrel", "Scope", "Flashlight", "Earbuds", "Weapons Light", "Knife", "Other"];
 
 
-// Not found - indexes [1, ]
+// Not found - indexes [B000Q9C4AE, B086OO4295]
+// Last item missing asin value
 const items = [
     {
         name:"Magneto Speed Rifle Kuhl Barrel Cooler",
@@ -177,12 +178,17 @@ const items = [
         price: 45.98
     },
     {
-        name:"SureFire unisex adult UE-SR07-B",
-        category:"",
+        name:"SureFire unisex adult UE-SR07-BK Equipment",
+        brand: "SureFire",
+        category:"Other",
         asin: "B01B5E5NBK",
-        description: "",
+        description: "hunting and shooting equipment, Black, SWITCH-SOCKET ASSEMBLY US",
         details: [
-
+            "The Black UE07 provides reliable remote activation for any Scout Light WeaponLight; The switch, cable, and connector are an integral unit that plugs into the tailcap socket",
+            "Provides remote momentary-on and constant-on WeaponLight activation",
+            "Switch platform with 7'' cable Snap-on to to Picatinny rail without tools",
+            "Waterproof o-ring sealed housing",
+            "Fits most Scout Light WeaponLights (excludes Micro Scout Light Pro)"
         ],
         price: 124.70
     },
@@ -197,32 +203,44 @@ const items = [
         price: 310.00
     },
     {
-        name:"Surefire Sonic DFNDR MED BLK",
-        category:"",
+        name:"Surefire Sonic Defenders Ear Plugs",
+        brand: "SureFire",
+        category:"Earbuds",
         asin: "B010TT1VO0",
         description: "",
         details: [
-
+            "Black earbuds (1 pair)",
+            "Noise Protection, plastic material"
         ],
         price: 16.99
     },
     {
         name:"SureFire G2X Tactical Single-Out",
-        category:"",
+        brand: "SureFire",
+        category:"Flashlight",
         asin: "B009F7J8RA",
-        description: "",
+        description: "LED Flashlight with Tactical tailcap click switch, Black",
         details: [
-
+            "Virtually indestructible LED emitter regulated to maximize light output and runtimex",
+            "Single high output level of 600 lumens for maximum light",
+            "Tactical tailcap click switch—partially press for momentary-on; push further until it clicks for constant-on",
+            "Precision micro-textured reflector creates smooth, optimized beam",
+            "Tough Nitrolon body, anodized aluminum bezel, Tough polycarbonate window resists impact"
         ],
         price: 78.69
     },
     {
         name:"SureFire EP7 Sonic Defenders Ultra",
-        category:"",
+        brand: "SureFire",
+        category:"Earbuds",
         asin: "",
-        description: "",
+        description: "filtered Earplugs w/ Comply Canal Tips, reusable",
         details: [
-
+            "28dB Noise Reduction Rating (NRR) with filter caps inserted, Hear safe sound levels (with filter caps out) as if you weren't wearing ear plugs",
+            "Soft memory-foam Canal Comply Tips provide secure seals in ear canals and all-day comfort (additional pair of Comply Canal tips included)",
+            "Low-profile design allows you to keep them in place while wearing a mask, helmet, hat, or while using supplemental hearing muffs",
+            "Patented EarLock retention rings utilize seven contact points to lock earpieces in place and fit the same way every time",
+            "Made in USA from hypoallergenic, medical-grade polymer that's soft, durable, and long-lasting"
         ],
         price: 0.00
     }
