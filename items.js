@@ -1,0 +1,229 @@
+const categories = ["Barrel", "Scope", "Flashlight", "Earbuds", "Weapons Light", "Knife", "Other"];
+
+
+// Not found - indexes [1, ]
+const items = [
+    {
+        name:"Magneto Speed Rifle Kuhl Barrel Cooler",
+        brand: "MagnetoSpeed",
+        // model: "RIFLEKüHL",
+        category:"Barrel",
+        asin: "B07TLF4KKY",
+        description: "Red Rifle Barrel Cooling, Chamber Flag during Shooting, uses for activities",
+        details: [
+            "Chamber seal for increased cooling efficiency", 
+            "Turbocharger inspired impeller pushes ambient air down barrel",
+            "Replaceable built-in 50 Micron air filter",
+            "Belt/Pocket clip included for easy carrying",
+            "Strong neodymium magnet to secure device"
+        ],
+        price: 60.00
+    },
+    {
+        name:"Spyderco Tri-Angle Sharpmaker",
+        category:"",
+        asin: "B000Q9C4AE",
+        description: "",
+        details: "",
+        condition: "New",
+        price: 88.00,
+        stock: 0
+    },
+    {
+        name:"Crimson Trace RAD Micro Compact Open Reflex Pistol Sight",
+        brand: "Crimson Tace",
+        // model: "",
+        category:"Scope",
+        asin: "B08Q39GM75",
+        description: "Pistol Sight with Integrated Co-Witness for Compact and Subcompact Handguns, Defensive Shooting and Competition",
+        details: [
+            "RUNTIME: 20,000 hours of battery life that runs on 1 CR1632 battery",
+            "EASE OF USE: CT Radiant ambient light sensor adjusts reticle brightness and CT Motion shake-to-wake sensor automatically activates reticle when drawn",
+            "ACCURACY: Sight features 3 MOA red dot reticle for easy target acquisition and integrated co-witness sight for added confidence",
+            "DURABLE: Constructed from aerospace grade aluminum with recessed optic lens for added protection – IPX4 water resistant"
+        ],
+        price: 175.00
+    },
+    {
+        name:"SureFire X300U-B X300 Ultra LED",
+        brand: "SureFire",
+        category:"Weapons Light",
+        asin: "B016J0EITS",
+        description: "LED WeaponLights with TIR Lens",
+        details: [
+            "Special off-white high-performance LED produces 600 lumens, biased in the yellowish-green spectrum optimal for human vision",
+            "Precision TIR lens creates a smooth, tight beam with enough surround light for peripheral illumination",
+            "Switching-Ambidextrous push/toogle, integral, ergonomic one-finger ambidextrous momentary - and constant -on switching",
+            "Integral aluminum T-slot mounting system offers rock-solid attachment to railed hand guns and long guns equipped with MIL-STD 1913 rails",
+            "Construction: High-strength aerospace aluminum with Mil-Spec anodizing; coated, tempered window"
+        ],
+        price: 271.00
+    },
+    {
+        name:"Surefire Ultra High Output LED",
+        brand: "SureFire",
+        category:"Weapons Light",
+        asin: "B00999CBJ6",
+        description: "LED WeaponLights with TIR Lens",
+        details: [
+            "Special off-white high-performance LED produces 600 lumens biased in the yellowish-green spectrum optimal for human vision",
+            "Precision TIR lens creates a smooth, tight beam with enough surround light for peripheral illumination",
+            "Integral, ergonomic one-finger ambidextrous momentary and constant on switching",
+            "Instantly attaches to both Universal and Picatinny accessory rails. FITS: The new T-slot mounting system fits most railed handguns (and rail-equipped long guns) but adapter mounts are available for some non-railed handguns",
+            "Accepts optional pressure-activated switches for precision control without altering grip on weapon",
+            "High-strength aerospace aluminum body is Mil-Spec hard anodized for extreme durability. Permits rapid attachment to and removal from rails on pistols or rifles"
+        ],
+        price: 291.00
+    },
+    {
+        name:"Keson P110 Octoganal Chalk Line Reel",
+        brand: "Keson",
+        category:"Other",
+        asin: "B0001VNY4M",
+        description: "1.5mm String, 2-4-Ounce Capacity, 100-Foot ",
+        details: [
+            "Unique shape great for corner work",
+            "Heavy-duty steel crank for long life",
+            "Holds 3-Ounces of chalk",
+            "100 Foot bold cord",
+            "Self-sealing grommet for spill-free refills"
+        ],
+        price: 14.99
+    },
+    {
+        name:"Spyderco Tenacious Folding Utility Pocket Knife",
+        brand: "Spyderco",
+        category:"Knife",
+        asin: "B007CK46RO",
+        description: "3.39'' Black Stainless Steel Blade and Durable G-10 Handle - Everyday Carry",
+        details: [
+            "Game Changer: Being tenacious means you are persistent and cohesive. It's being tough and tireless in achieving your best performance; all worthy descriptive words for a hard-use knife.",
+            "Superior Blade Steel: The 3.39'' 8Cr13MoV stainless blade is coated in a non-reflective black coating and ground-flat from spine to cutting-edge for non-stop cutting.",
+            "A Secure Grip: It has a black G-10 laminate handle, Ergonomically milled with prolonged fatigue-free cutting in mind.",
+            "Easy-To-Use: The blade's shape coupled with an oversized Spyderco Round Hole and textured spine jimping allows you to open the blade and position your thumb on the spine in slip-proof confidence ready for work.",
+            "Pocket-Friendly: The Tenacious includes a Walker Linerlock and a 4-way pocket clip lets the folder be set in a variety of carry and draw positions: Tip-up/tip-down left-hand/right-hand."
+        ],
+        price: 57.98
+    },
+    {
+        name:"Competition Electronics ProTimer",
+        brand: "Competition Electronics",
+        category:"Other",
+        asin: "B09NMNQPRX",
+        description: "ProTimerBT Shot Timer Blue, One Size",
+        details: [
+            "Bluetooth capability with a free mobile app for Apple, Android, and Kindle devices to catalog data, and provide an enhanced user interface",
+            "Bright LED indicator to signal the start, which can be useful for those with hearing loss",
+            "Headset jack, for a private practice session, when the beeper may be a nuisance to others",
+            "Built in shot string memory of up to 50 strings for later review on screen; Built in “hit factor” scoring calculator for USPSA shooters",
+            "Increased sensitivity capability that can pick up the snap of a finger"
+        ],
+        price: 164.00
+    },
+    {
+        name:"SureFire X300 Ultra Series LED WeaponLights with TIR Lens",
+        brand: "SureFire",
+        category:"Weapons Light",
+        asin: "B00NCAD1J2",
+        description: "Night Vision, Precision Beam with Peripheral Illumination, Tan color, Battery Powered",
+        details: [
+            "Special off-white high-performance LED produces 600 lumens, biased in the yellowish-green spectrum optimal for human vision",
+            "Precision TIR lens creates a smooth, tight beam with enough surround light for peripheral illumination",
+            "Integral, ergonomic one-finger ambidextrous momentary - and constant -on switching",
+            "Features quick-detach Rail-Lock system for rapid and secure attachment/detachment",
+            "Accepts optional pressure-activated switches for precision control without altering grip on weapon",
+            "NOTE: Refer the User Manual before use.",
+            "Special off-white high-performance LED produces 600 lumens, biased in the yellowish-green spectrum optimal for human vision"
+        ],
+        price: 279.00
+    },
+    {
+        name:"SUREFIRE X300U Turbo Thumbsc",
+        brand: "SureFire",
+        category:"Weapons Light",
+        asin: "B0B96XXVGN",
+        description: "High-Candela LED Handgun WeaponLights",
+        details: [
+            "Hand Orientation: Ambidextrous",
+            "Plastic Material, Black COlor"
+        ],
+        price: 269.50
+    },
+    {
+        name:"SUREFIRE XSC-A 350LUM LED BLK",
+        brand: "SureFire",
+        category:"Weapons Light",
+        asin: "B08KJSJ4XZ",
+        description: "Micro-Compact Handgun Lights",
+        details: [
+            "Battery Powered LED",
+            "Rechargeable, Black color, Plastic Material"
+        ],
+        price: 269.90
+    },
+    {
+        name:"CRKT CEO Flipper EDC Folding Pocket Knife",
+        category:"Knife",
+        asin: "B08KDRVSD4",
+        description: "Low Profile Gentleman's Knife, Everyday Carry, Satin Blade, IKBS Ball Bearing Pivot, Liner Lock, Glass Reinforced Fiber Handle, Deep Carry Pocket Clip",
+        details: [
+            "Smooth Opening: IKBS ball bearing pivot deploys the blade smooth",
+            "Easy To Sharpen: High carbon stainless steel blade takes an edge well",
+            "Fast Opening: Flipper deploys the blade fast",
+            "Strong And Lightweight: Glass-reinforced nylon handle is durable and lightweight",
+            "Easy Closing: Liner lock can be easily closed with one hand",
+            "Carry Options: Adjustable clip for left or right hand carry"
+        ],
+        price: 45.98
+    },
+    {
+        name:"SureFire unisex adult UE-SR07-B",
+        category:"",
+        asin: "B01B5E5NBK",
+        description: "",
+        details: [
+
+        ],
+        price: 124.70
+    },
+    {
+        name:"SureFire Scout Light Pro Ultra-High",
+        category:"",
+        asin: "B086OO4295",
+        description: "",
+        details: [
+
+        ],
+        price: 310.00
+    },
+    {
+        name:"Surefire Sonic DFNDR MED BLK",
+        category:"",
+        asin: "B010TT1VO0",
+        description: "",
+        details: [
+
+        ],
+        price: 16.99
+    },
+    {
+        name:"SureFire G2X Tactical Single-Out",
+        category:"",
+        asin: "B009F7J8RA",
+        description: "",
+        details: [
+
+        ],
+        price: 78.69
+    },
+    {
+        name:"SureFire EP7 Sonic Defenders Ultra",
+        category:"",
+        asin: "",
+        description: "",
+        details: [
+
+        ],
+        price: 0.00
+    }
+];

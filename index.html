@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hunting Gear Catalog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Hunting Gear Catalog</h1>
+
+  <div class="filters">
+    <input type="text" id="search" placeholder="Search..." oninput="applyFilters()">
+    <select id="category" onchange="applyFilters()">
+      <option value="">All Categories</option>
+      <option value="Knife">Knife</option>
+      <option value="Flashlight">Flashlight</option>
+      <option value="Scope">Scope</option>
+      <option value="Earbuds">Earbuds</option>
+    </select>
+    <input type="number" id="minPrice" placeholder="Min Price" oninput="applyFilters()">
+    <input type="number" id="maxPrice" placeholder="Max Price" oninput="applyFilters()">
+    <!-- <button onclick="applyFilters()">Apply Filters</button> -->
+    <button onclick="clearFilters()">Clear Filters</button>
+  </div>
+
+  <div class="catalog" id="catalog"></div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <img id="modal-img" />
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <p id="modal-price"></p>
+    </div>
+  </div>
+
+  <script src="items.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
