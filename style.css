@@ -38,6 +38,7 @@ h1 {
   padding: 16px;
   text-align: center;
   cursor: pointer;
+  position: relative; /* change */
 }
 
 .item img {
@@ -50,6 +51,7 @@ h1 {
 .item h3 {
   margin: 10px 0 5px;
   color: #333;
+  padding-bottom: 5px;
 }
 
 .item p {
@@ -58,9 +60,14 @@ h1 {
 }
 
 .item .price {
-  margin-top: 10px;
   font-weight: bold;
   color: #27ae60;
+  /* changes below */
+  position: absolute;
+  bottom: 0;
+  left: 38%;
+  margin-top: 10px;
+  margin-bottom: 5px;;
 }
 
 .modal {
@@ -75,18 +82,60 @@ h1 {
   align-items: center;
 }
 
-.modal-content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 90%;
-}
-
 .close-btn {
   float: right;
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
   color: #333;
+} 
+ .modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 90%;
+}
+
+.modal-body {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.modal-img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.modal-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  color: red;
+  font-weight: bold;
+}
+
+.condition {
+  color: gray;
+}
+
+.price {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.details-list {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.details-list li {
+  margin-bottom: 5px;
 }
