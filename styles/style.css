@@ -1,0 +1,93 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    font-size: 24px;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 4px 24px;
+    border-radius: 16px;
+}
+
+.header .logo {
+    margin-left: 10%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 24px;
+    align-items: center;
+    box-shadow: 0px 10px 75px gray;
+    border-radius: 4px;
+    flex-wrap: wrap;
+}
+
+.header .logo img {
+    max-width: 150px;
+    max-height: 50px;
+    border-radius: 6px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.navigation ul:hover {
+    background-color: #efefef;
+}
+
+.wishlist {
+    margin-left: 64px;
+    background-color: tomato;
+    padding: 4px 32px;
+    border-radius: 8px;
+}
+
+.wishlist:hover {
+    background-color: red;
+}
+
+.wishlist a {
+    color: white;
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    border-top: 1px solid black;
+    padding: 16px;
+    margin-top: 64px;
+}
+
+nav {
+    margin-right: 10%;
+}
