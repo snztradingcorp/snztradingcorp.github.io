@@ -1,0 +1,233 @@
+.main .metadata h1 {
+    font-size: 72px;
+    font-style: italic;
+}
+
+.main .metadata h2 {
+    font-size: 48px;
+}
+
+.main .metadata .links button a {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.main .metadata .links button {
+    border-radius: 12px;
+    border: none;
+    padding: 4px 12px;
+}
+
+.main .metadata .links button:hover {
+    background-color: burlywood;
+}
+
+.main .metadata .links button a:hover {
+    color: white;
+}
+
+.images .wrapper img {
+    max-width: 500px;
+    max-height: 305px;
+    border-radius: 16px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 64px;
+}
+
+.container .card .icon img {
+    max-width: 50px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 24px 5%;
+}
+
+.container .card {
+    min-width: 28%;
+    max-width: 400px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    border: 1px dotted black;
+    padding: 8px 16px;
+    border-radius: 8px;
+    flex: 1;
+    word-break: break-word;
+}
+
+.catalog .meta {
+    text-align: left;
+    padding-left: 10%;
+    font-weight: 900;
+}
+
+.catalog .meta h3 {
+    font-size: 42px;
+}
+
+.catalog .meta h4 {
+    font-size: 28px;
+}
+
+.main {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.container .card .info {
+    flex: 1;
+}
+
+.container .card .info .name {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.container .card .info .description {
+    font-size: 18px;
+    margin-top: 8px;
+    text-align: left;
+}
+
+#about-tab {
+    background-color: #efefef;
+}
+
+.contact {
+    margin: 32px 20%;
+    padding: 32px 64px;
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    border: 2px dotted burlywood;
+    background-color: burlywood;
+    align-items: center;
+    color: rgb(29, 26, 26);
+    border-radius: 8px;
+    font-weight: 900;
+    border: 3px solid #444;
+}
+
+.contact a {
+    font-size: 26px;
+    border-color: 1px solid white;
+    color: white;
+    font-weight: 800;
+}
+
+.contact {
+    color: white;
+}
+
+.contact .button {
+    border: 1px solid white;
+    padding: 8px 24px;
+    border-radius: 8px;
+}
+
+.contact .button:hover {
+    background-color: antiquewhite;
+}
+
+.contact a:hover {
+    color: burlywood;
+}
+
+/*
+    Experimental
+*/
+
+@media (max-width: 768px) {
+  /* Typography scaling */
+  .main .metadata h1 {
+    font-size: 36px;
+  }
+
+  .main .metadata h2 {
+    font-size: 24px;
+  }
+
+  .main .metadata .links button a {
+    font-size: 16px;
+  }
+
+  /* Image scaling */
+  .images .wrapper img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  /* Card layout adapts to single column */
+  .container {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .container .card {
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container .card .icon img {
+    max-width: 40px;
+    margin: 0 auto;
+  }
+
+  .container .card .info .name {
+    font-size: 20px;
+  }
+
+  .container .card .info .description {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Catalog text adjustment */
+  .catalog .meta {
+    padding-left: 5%;
+  }
+
+  .catalog .meta h3 {
+    font-size: 28px;
+  }
+
+  .catalog .meta h4 {
+    font-size: 20px;
+  }
+
+  /* Contact section stacks vertically */
+  .contact {
+    flex-direction: column;
+    gap: 16px;
+    font-size: 20px;
+    padding: 24px;
+    margin: 16px;
+  }
+
+  .contact a {
+    font-size: 18px;
+  }
+
+  .contact .button {
+    width: 100%;
+    text-align: center;
+  }
+}

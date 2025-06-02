@@ -127,3 +127,25 @@ const productsHTML = `
                         </div>
                     </div>
 `;
+
+const contactHTML = `
+<div class="hero-newsletter">
+  <div class="text-content-title">
+    <div class="title">Reach Out!</div>
+    <div class="subtitle">Contact US for More!</div>
+  </div>
+  <div class="form-newsletter">
+    <div class="input-field">
+      <div class="input">
+        <div class="value">snztradingcorporation@gmail.com</div>
+      </div>
+    </div>
+    <div class="button">
+      <div class="button2">Copy</div>
+    </div>
+  </div>
+</div>
+`;
+
+// snztradingcorporation@gmail.com
+// 718 644 7560

@@ -43,7 +43,7 @@ function run(pageNumber) {
         initializeCategoryFilter(categories);
         renderItems(items);
     } else if(pageNumber === 2) { // Contact Page
-
+        document.getElementsByClassName("main")[0].innerHTML = contactHTML;
     } else { //Wishlist
 
     }
