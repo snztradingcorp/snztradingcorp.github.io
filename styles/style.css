@@ -91,3 +91,52 @@ footer {
 nav {
     margin-right: 10%;
 }
+
+
+
+
+/* Experimental */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    text-align: left;
+  }
+
+  .header .logo {
+    margin-left: 0;
+    margin-bottom: 12px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .wishlist {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    margin-right: 0;
+  }
+
+  footer {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  header, footer {
+    font-size: 18px;
+  }
+
+  .header .logo img {
+    max-width: 120px;
+    max-height: 40px;
+  }
+}

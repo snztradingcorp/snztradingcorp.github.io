@@ -148,3 +148,86 @@
 .contact a:hover {
     color: burlywood;
 }
+
+/*
+    Experimental
+*/
+
+@media (max-width: 768px) {
+  /* Typography scaling */
+  .main .metadata h1 {
+    font-size: 36px;
+  }
+
+  .main .metadata h2 {
+    font-size: 24px;
+  }
+
+  .main .metadata .links button a {
+    font-size: 16px;
+  }
+
+  /* Image scaling */
+  .images .wrapper img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  /* Card layout adapts to single column */
+  .container {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .container .card {
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container .card .icon img {
+    max-width: 40px;
+    margin: 0 auto;
+  }
+
+  .container .card .info .name {
+    font-size: 20px;
+  }
+
+  .container .card .info .description {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Catalog text adjustment */
+  .catalog .meta {
+    padding-left: 5%;
+  }
+
+  .catalog .meta h3 {
+    font-size: 28px;
+  }
+
+  .catalog .meta h4 {
+    font-size: 20px;
+  }
+
+  /* Contact section stacks vertically */
+  .contact {
+    flex-direction: column;
+    gap: 16px;
+    font-size: 20px;
+    padding: 24px;
+    margin: 16px;
+  }
+
+  .contact a {
+    font-size: 18px;
+  }
+
+  .contact .button {
+    width: 100%;
+    text-align: center;
+  }
+}
