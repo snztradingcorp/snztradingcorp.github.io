@@ -1,14 +1,15 @@
 const categories = ["Barrel", "Scope", "Flashlight", "Weapons Light", "Knife", "Other"];
 
-const links = ["about", "products", "contact", "wishlist"];
+// const links = ["about", "products", "contact", "wishlist"];
+const links = ["about", "products", "contact"];
 
 const aboutHTML = `
                     <div class="metadata">
                         <h1>SNZ Trading Corporation.</h1>
-                        <h2>We Sell Hunting Gear!</h2>
+                        <h2>We Sell Electronic Appliances and Hunting Gear!</h2>
                         <div class="links">
-                            <button type="button"><a href="./products.html">Products</a></button>
-                            <button type="button"><a href="./contact.html">Contact</a></button>
+                            <button type="button" onclick="run(APPLIANCES_PAGE)"><a href="#">Appliances</a></button>
+                            <button type="button" onclick="run(HUNTING_PAGE)"><a href="#">Hunting Gear</a></button>
                         </div>
                     </div>
 
@@ -128,6 +129,10 @@ const productsHTML = `
                     </div>
 `;
 
+const appliancesHTML = `
+    <object id="object-tag" data='./files/appliances.pdf' type='application/pdf'></object>
+`
+
 const contactHTML = `
 <div class="hero-newsletter">
   <div class="text-content-title">
@@ -137,15 +142,22 @@ const contactHTML = `
   <div class="form-newsletter">
     <div class="input-field">
       <div class="input">
-        <div class="value">snztradingcorporation@gmail.com</div>
+        <div class="value" id="copy-email">snztradingcorporation@gmail.com</div>
       </div>
     </div>
     <div class="button">
-      <div class="button2">Copy</div>
+      <div class="button2" id="copy-btn">Copy</div>
     </div>
   </div>
 </div>
 `;
 
-// snztradingcorporation@gmail.com
+const ABOUT_PAGE = 0;
+const HUNTING_PAGE = 1;
+const CONTACT_PAGE = 2;
+const WISHLIST_PAGE = 3;
+const APPLIANCES_PAGE = 4;
+
+
+const COMPANY_EMAIL = "snztradingcorporation@gmail.com"
 // 718 644 7560

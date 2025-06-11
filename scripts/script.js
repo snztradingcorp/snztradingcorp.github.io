@@ -2,12 +2,29 @@
     Called each time script is loaded
 */
 function initialize() {
-    document.getElementById("about-link").addEventListener("click", () => run(0));
-    document.getElementById("products-link").addEventListener("click", () => run(1));
-    document.getElementById("contact-link").addEventListener("click", () => run(2));
-    document.getElementById("wishlist-link").addEventListener("click", () => run(3));
+  document.getElementById("about-link").addEventListener("click", () => run(ABOUT_PAGE));
+  document.getElementById("products-link").addEventListener("click", () => run(HUNTING_PAGE));
+  document.getElementById("contact-link").addEventListener("click", () => run(CONTACT_PAGE));
+  // document.getElementById("wishlist-link").addEventListener("click", () => run(WISHLIST_PAGE));
 
-    run(0); // About page
+  document.getElementById("appliances-link").addEventListener("click", () => run(APPLIANCES_PAGE));
+
+  run(ABOUT_PAGE); // About page
+}
+
+function createClipBoard() {
+  //initialize copy button
+  const copyBtn = document.getElementById("copy-btn");
+  copyBtn.addEventListener("click", () => {
+    // copy the text inside the input
+    navigator.clipboard.writeText(COMPANY_EMAIL).then(() => {
+      window.alert("Copied to clipboard: " + COMPANY_EMAIL);
+    }).catch(err => {
+      console.error("Failed to copy: ", err);
+    });
+
+    copyHandlerInitialized = true;
+  });
 }
 
 /* General
@@ -29,6 +46,10 @@ function updateLinks(pageNumber, links) {
             }
         }
     }
+
+    if(pageNumber === CONTACT_PAGE) {
+      createClipBoard();
+    }
 }
 
 /* General
@@ -36,16 +57,24 @@ function updateLinks(pageNumber, links) {
 */
 function run(pageNumber) {
     console.log(pageNumber);
-    if(pageNumber === 0) { //About page
+    if(pageNumber === ABOUT_PAGE) { //About page
         document.getElementsByClassName("main")[0].innerHTML = aboutHTML;
-    } else if(pageNumber === 1) { // Products Page
+    } else if(pageNumber === HUNTING_PAGE) { // Products Page
         document.getElementsByClassName("main")[0].innerHTML = productsHTML;
         initializeCategoryFilter(categories);
         renderItems(items);
-    } else if(pageNumber === 2) { // Contact Page
+    } else if(pageNumber === CONTACT_PAGE) { // Contact Page
         document.getElementsByClassName("main")[0].innerHTML = contactHTML;
-    } else { //Wishlist
+    // } else if(pageNumber === 3) { //Wishlist
 
+    } else { // Appliances
+      document.getElementsByClassName("main")[0].innerHTML = appliancesHTML;
+    }
+
+    if(pageNumber === APPLIANCES_PAGE) {
+      document.getElementById("appliances-tab").style.backgroundColor = '#efefef';
+    } else {
+      document.getElementById("appliances-tab").style.backgroundColor = 'inherit';
     }
 
     updateLinks(pageNumber, links);
