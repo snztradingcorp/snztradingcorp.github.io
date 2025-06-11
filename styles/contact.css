@@ -135,3 +135,8 @@
   font-weight: var(--single-line-body-base-font-weight, 400);
   position: relative;
 }
+
+
+.hero-newsletter {
+  height: 85vh;
+}
