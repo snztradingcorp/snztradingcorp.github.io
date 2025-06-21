@@ -15,7 +15,7 @@ const aboutHTML = `
 
                     <div class="images">
                         <div class="wrapper">
-                            <img src="./images/default/default_1.jpg" alt="Image of Hunting Gear" />
+                            <img src="./images/default/default_new.jpg" alt="Image of Hunting Gear" />
                         </div>
                         <div class="wrapper">
                             <img src="./images/default/default_2.jpg" alt="Image of Hunting in the Wild" />
